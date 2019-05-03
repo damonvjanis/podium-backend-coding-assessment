@@ -1,21 +1,21 @@
-# Backend Coding Assessment
+# Podium
 
-We really look for three things when it comes to the coding challenge: 
+**TODO: Add description**
 
-- 1 You follow good engineering practices
-- 2 Your code is well tested and documented
-- 3 You show thoughtful code organization
+## Installation
 
-You can use any language you choose just be sure you include execution instructions, etc. Let me know if you have any questions.
+If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+by adding `podium` to your list of dependencies in `mix.exs`:
 
-##### Coding Challenge: “A Dealer For the People”
+```elixir
+def deps do
+  [
+    {:podium, "~> 0.1.0"}
+  ]
+end
+```
 
-The KGB has noticed a resurgence of overly excited reviews for a McKaig Chevrolet Buick, a dealership they have planted in the United States. In order to avoid attracting unwanted attention, you’ve been enlisted to scrape reviews for this dealership from DealerRater.com and uncover the top three worst offenders of these overly positive endorsements.
+Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
+and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
+be found at [https://hexdocs.pm/podium](https://hexdocs.pm/podium).
 
-Your mission, should you choose to accept it, is to write a tool that:
-
-- 1 scrapes the first five pages of reviews
-- 2 identifies the top three most “overly positive” endorsements (using criteria of your choosing, documented in the README)
-- 3 outputs these three reviews to the console, in order of severity
-
-Please include documentation on how to run your application along with how to run the test suite.
