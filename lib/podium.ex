@@ -16,8 +16,11 @@ defmodule Podium do
   By default, scrapes the first 5 pages of @url and returns the 3 most positive reviews.
   """
   def get_reviews(page_range \\ 1..5, num_reviews \\ 3) do
-    page_range
-    |> Enum.map(&get_html/1)
+    for page_num <- page_range do
+      Task.async(fn -> get_html(page_num) end)
+    end
+    |> Task.yield_many()
+    |> Enum.map(fn {_, {:ok, page_html}} -> page_html end)
     |> Enum.map(&extract_review_data/1)
     |> List.flatten()
     |> Order.order_by_most_positive()
