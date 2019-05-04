@@ -41,7 +41,7 @@ I've chosen to identify the "most overly positive" reviews by utilizing a point 
 
 1. Each exclamation mark in the review is worth a point.
 2. Each word in all caps more than one letter long (to avoid "I"), is worth 1 point.
-3. Every word in the review matching an arbitrary list of common "positive" words is worth one point. The full list can be found in a module attribute "constant" in `lib/order.ex`.
+3. Every word in the review matching an arbitrary list of common "positive" words is worth one point. The full list can be found in a module attribute "constant" in `lib/podium/order.ex`.
 4. The total score is then divided by the number of characters in the review, so that more concentrated occurances of the positivity indicators will result in a higher overall ranking.
 
 ## Testing
