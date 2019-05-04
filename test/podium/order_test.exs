@@ -3,8 +3,6 @@ defmodule Podium.OrderTest do
 
   alias Podium.Order
 
-  doctest Order
-
   setup_all do
     # Read the test HTML file into a variable
     html = File.read!("test/fixtures/html.txt")

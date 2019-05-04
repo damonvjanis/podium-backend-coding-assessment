@@ -1,0 +1,22 @@
+<h1>Current Most Positive Reviews for McKaig</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Date</th>
+      <th>Customer</th>
+      <th>Review</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for {review, index} <- Enum.with_index(@reviews, 1) do %>
+      <tr>
+        <th>#<%= index %></th>
+        <td><%= review.date %></td>
+        <td><%= review.customer %></td>
+        <td><%= review.review %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

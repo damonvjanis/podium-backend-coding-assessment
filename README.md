@@ -30,7 +30,7 @@ $ mix test --include integration
 
 ## Libraries
 
-The program depends on two open-source libraries and their dependencies, please see `mix.exs` and `mix.lock` for a full list. Since they're all imported from the Hex package manager their respective licenses can be found on [hex.pm](hex.pm)
+The program depends on several open-source libraries and their dependencies, please see `mix.exs` and `mix.lock` for a full list. Since they're all imported from the Hex package manager their respective licenses can be found on [hex.pm](hex.pm)
 
 ## Methodology
 

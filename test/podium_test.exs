@@ -1,6 +1,5 @@
 defmodule PodiumTest do
   use ExUnit.Case, async: true
-  doctest Podium
 
   setup_all do
     # Read the test HTML file into a variable
