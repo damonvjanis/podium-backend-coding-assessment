@@ -1,5 +1,8 @@
 # Podium Backend Coding Assessment
 
+## Easy online visual
+I've added Phoenix and deployed to Heroku for a quick visual of the top three most positive reviews without having to compile and run the program: https://damon-podium.herokuapp.com
+
 ## Instructions for running the program
 
 1. Download or clone the git repo from [GitHub](https://github.com/podium-eng-recruiting/backend-coding-assessment-damonvjanis-1298)
