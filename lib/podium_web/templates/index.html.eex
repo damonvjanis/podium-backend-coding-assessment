@@ -11,9 +11,28 @@
   </head>
   <body>
     <main role="main" class="container">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-      <%= render @view_module, @view_template, assigns %>
+      <h1 style="margin-top: 25px;">Current Most Positive Reviews for McKaig</h1>
+      
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Date</th>
+            <th>Customer</th>
+            <th>Review</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= for {review, index} <- Enum.with_index(@reviews, 1) do %>
+          <tr>
+            <th>#<%= index %></th>
+            <td><%= review.date %></td>
+            <td><%= review.customer %></td>
+            <td><%= review.review %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
     </main>
   </body>
 </html>

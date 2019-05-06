@@ -1,17 +1,20 @@
 defmodule PodiumWeb.Router do
-  use PodiumWeb, :router
+  use Plug.Router
 
-  pipeline :browser do
-    plug :accepts, ["html"]
-    plug :fetch_session
-    plug :fetch_flash
-    plug :protect_from_forgery
-    plug :put_secure_browser_headers
+  alias PodiumWeb.Controller
+
+  plug(:match)
+  plug(:dispatch)
+
+  get "/" do
+    Controller.index(conn, conn.params)
   end
 
-  scope "/", PodiumWeb do
-    pipe_through :browser
+  match _ do
+    send_resp(conn, 404, "page not found")
+  end
 
-    get "/", PageController, :index
+  def handle_errors(conn, %{kind: _kind, reason: _reason, stack: _stack}) do
+    send_resp(conn, conn.status, "something went wrong")
   end
 end
