@@ -1,7 +1,7 @@
 # Podium Backend Coding Assessment
 
 ## Easy online visual
-I've added Phoenix and deployed to Heroku for a quick visual of the top three most positive reviews without having to compile and run the program: https://damon-podium.herokuapp.com
+I've added Plug/Cowboy and deployed to Heroku for a quick visual of the top three most positive reviews without having to compile and run the program: https://damon-podium.herokuapp.com
 
 ## Instructions for running the program
 
@@ -33,7 +33,7 @@ $ mix test --include integration
 
 ## Libraries
 
-The program depends on several open-source libraries and their dependencies, please see `mix.exs` and `mix.lock` for a full list. Since they're all imported from the Hex package manager their respective licenses can be found on [hex.pm](hex.pm)
+The program depends on four open-source libraries and their dependencies, please see `mix.exs` and `mix.lock` for a full list. Since they're all imported from the Hex package manager their respective licenses can be found on [hex.pm](hex.pm)
 
 ## Methodology
 
